@@ -11,8 +11,6 @@ export class TaskserviceService {
   constructor() { 
     this.tasks.push("Tarea1","Tarea3");
     this.completedTasks.push("Tarea2","Tarea4");
-    //this.tasks = ["Tarea1","Tarea3"];
-    //this.completedTasks= ["Tarea2","Tarea4"];
   }
 
   public addTask(task:String){

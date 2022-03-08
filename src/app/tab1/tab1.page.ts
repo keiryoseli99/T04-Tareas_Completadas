@@ -8,32 +8,30 @@ import { TaskserviceService } from '../services/taskservice.service';
 })
 export class Tab1Page {
 
-  public tasks: String[];//
+  public tasks: String[];
   public task: String;
 
   constructor(
     private taskserviceService: TaskserviceService
   ) {
-    this.tasks = this.taskserviceService.getTasks();//
+    this.tasks = this.taskserviceService.getTasks();
     this.task = '';
   }
 
   private add() {
     this.taskserviceService.addTask(this.task);
-    this.tasks = this.taskserviceService.getTasks();//
-    this.task = '';//
+    this.tasks = this.taskserviceService.getTasks();
+    this.task = '';
   }
-
-  //private get = this.taskserviceService.getTask();
 
   private remove(pos:number) {
     this.taskserviceService.removeTask(pos);
-    this.tasks = this.taskserviceService.getTasks();//
+    this.tasks = this.taskserviceService.getTasks();
   }
 
   private complete(pos:number){
     this.taskserviceService.completeTask(pos);
-    this.tasks = this.taskserviceService.getTasks();//
+    this.tasks = this.taskserviceService.getTasks();
   }
   
 }
